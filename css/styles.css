@@ -4,19 +4,11 @@
   --primary-text-color: #757575;
   --accent-color: #2196f3;
   --mail-phone-color: rgba(255, 255, 255, 0.6);
+  --background-black-color: #2F303A;
 }
 
 /* в футере тел и міло - rgba(255, 255, 255, 0.6); */
 
-html {
-  box-sizing: border-box;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
 
 body {
   background-color: var(--secondary-title-color);
@@ -37,6 +29,9 @@ ul {
 }
 a {
   text-decoration: none;
+  display: block;
+  color: inherit;
+
 }
 button {
   cursor: pointer;
@@ -90,16 +85,17 @@ h1, h2, h3, p, ul {
 }
 
 footer {
-  background-color: var(--primary-title-text-color);
+  background-color: var(--background-black-color);
   line-height: 1.71;
   text-decoration: none;
   font-style: normal;
+  padding-top: 60px;
+    padding-bottom: 60px;
 }
 
 .footer .container {
   display: block;
-    padding-top: 60px;
-    padding-bottom: 60px;
+    
 
 }
 
@@ -163,6 +159,11 @@ justify-content: space-between;
 .page-header {
   border-bottom: 1px solid #ececec;
 }
+.page-header a {
+    padding-top: 32px;
+      padding-bottom: 32px;
+}
+
 .container-header {
   display: flex;
   align-items: center;
@@ -173,14 +174,14 @@ justify-content: space-between;
 
 .site-nav.list {
   display: flex;
-  padding-top: 32px;
-  padding-bottom: 32px;
+ 
   color: var(--primary-title-text-color);
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
   margin-left: 93px;
 }
+
 
 .site-nav .item:not(:last-child) {
   margin-right: 50px;
@@ -199,11 +200,7 @@ justify-content: space-between;
 /* info nav*/
 .info-nav.list {
   display: flex;
-
-  padding-top: 32px;
-    padding-bottom: 32px;
     margin-left: 344px;
-   
     font-weight: 500;
       font-size: 14px;
       line-height: 1.14;
@@ -233,7 +230,7 @@ justify-content: space-between;
 
 /* main section class hero */
 .section-hero {
-  background-color: #2f303a;
+  background-color: var(--background-black-color);
   text-align: center;
   padding: 200px 0;
 }
@@ -278,7 +275,9 @@ justify-content: space-between;
 .section-benefits,
 .section-activities {
   background-color: var(--secondary-title-color);
-  padding-bottom: 0px;
+}
+.section-benefits {
+  padding-bottom: 0;
 }
 
 /* section benefits */
@@ -404,12 +403,15 @@ justify-content: space-between;
   line-height: 1.62;
   padding: 6px 22px;
    border-radius: 4px;
-   margin-right: 8px;
+ 
 }
 
-
-
-
+.button-list {
+  margin-right: 8px;
+}
+.button-list:last-child {
+  margin-right: 0px;
+}
 
 .button-secondary:hover,
 .button-secondary:focus {
